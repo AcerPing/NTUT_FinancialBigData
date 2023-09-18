@@ -1,0 +1,46 @@
+Data analysis is the process of examining, filtering, adapting, and modeling data to help solve problems. Data analysis helps determine what is and isn’t working, so you can make the changes needed to achieve your business goals 1. Here are some examples of how data analysts work with different problem types:
+
+Making predictions: Data analysts can use predictive analysis to forecast future trends or events based on historical data. For example, a bank might use predictive analysis to determine the likelihood of a customer defaulting on a loan.
+
+Categorizing things: Data analysts can use classification techniques to categorize data into different groups. For example, a marketing team might use classification to segment their customer base into different groups based on demographics or purchasing behavior.
+
+Spotting something unusual: Data analysts can use anomaly detection techniques to identify unusual patterns or outliers in data. For example, a credit card company might use anomaly detection to identify fraudulent transactions.
+
+Identifying themes: Data analysts can use text analysis techniques to identify common themes or topics in large amounts of unstructured text data. For example, a company might use text analysis to analyze customer feedback and identify common complaints or areas for improvement.
+
+Discovering connections: Data analysts can use association rule mining techniques to identify relationships between different variables in data. For example, a retailer might use association rule mining to identify products that are frequently purchased together.
+
+Finding patterns: Data analysts can use pattern recognition techniques to identify recurring patterns in data. For example, a healthcare provider might use pattern recognition to identify common symptoms or risk factors for a particular disease.
+
+I hope these examples help you understand how data analysts work with different problem types!
+
+------------------------------------------------------------------------------------------------------------------------
+
+數據分析是指檢查、過濾、調整和建模數據以幫助解決問題。數據分析有助於確定哪些有效，哪些無效，以便您可以進行必要的更改以實現您的業務目標 。以下是一些數據分析師如何處理不同問題類型的示例：
+
+進行預測：數據分析師可以使用預測分析來根據歷史數據預測未來趨勢或事件。例如，銀行可能會使用預測分析來確定客戶違約貸款的可能性。
+
+分類事物：數據分析師可以使用分類技術將數據分類為不同組別。例如，營銷團隊可能會根據人口統計或購買行為使用分類來將客戶群劃分為不同組別。
+
+發現不尋常的事物：數據分析師可以使用異常檢測技術來識別數據中的不尋常模式或異常值。例如，信用卡公司可能會使用異常檢測來識別欺詐交易。
+
+識別主題：數據分析師可以使用文本分析技術來識別大量非結構化文本數據中的常見主題或話題。例如，公司可能會使用文本分析來分析客戶反饋並識別常見投訴或改進領域。
+
+發現聯繫：數據分析師可以使用關聯規則挖掘技術來識別數據中不同變量之間的關係。例如，零售商可能會使用關聯規則挖掘來識別經常一起購買的產品。
+
+查找模式：數據分析師可以使用模式識別技術來識別數據中的重複模式。例如，醫療保健提供者可能會使用模式識別來識別特定疾病的常見症狀或風險因素。
+
+希望這些示例能夠幫助您了解數據分析師如何處理不同問題類型！
+
+------------------------------------------------------------------------------------------------------------------------
+
+是的，辨識主題（Identifying Themes）可以應用在衣著上。例如，一項研究使用文本挖掘和語義網絡分析來分析29,436篇關於時裝系列的博客文章，其中包括“夾克”和“時裝系列”這兩個關鍵詞。該研究旨在通過分類風格（例如，復古），顏色（例如，黑色），面料（例如，皮革）和圖案（例如，格子）來確定每個設計特徵的時尚趨勢詞。通過時間序列聚類分析將時尚趨勢分為四個類別-增長，減少，常青和季節性趨勢-並且語義網絡分析可視化了最新季節的主導趨勢以及相應的設計特徵 1。
+
+這些結果非常有用，因為它們可以減少時尚趨勢分析的耗時過程並提供以消費者為導向的時尚設計指南。
+
+Reference：
+https://fashionandtextiles.springeropen.com/articles/10.1186/s40691-020-00221-w
+
+------------------------------------------------------------------------------------------------------------------------
+
+您可以在Kaggle上找到一個名為“Women's E-Commerce Clothing Reviews”的數據集，其中包含23,000條客戶評論和評分 ¹。您可以訪問以下鏈接下載數據集：https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews

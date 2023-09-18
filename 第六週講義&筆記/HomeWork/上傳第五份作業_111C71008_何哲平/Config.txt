@@ -1,0 +1,4 @@
+1.) RapidMiner版本：10.1.001
+2.) 來源檔案路徑：C:\Users\acer0\OneDrive\桌面\OnlineRetail.csv
+
+※當中有一個ipynb，是我另外用Python練習的檔案。

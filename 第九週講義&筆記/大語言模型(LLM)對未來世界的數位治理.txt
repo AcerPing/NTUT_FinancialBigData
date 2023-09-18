@@ -1,0 +1,4 @@
+大語言模型(LLM)對未來世界的數位治理
+LLM -> Large Language Models
+70B以上稱為大語言模型
+RLHF -> Reinforcement Learning from Human Feedback

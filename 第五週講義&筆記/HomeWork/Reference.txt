@@ -1,0 +1,17 @@
+【AI60問】Q21什麼是關聯規則學習？
+https://blog.tibame.com/?p=17914
+
+Machine Learning -關聯分析-Apriori演算法-詳細解說啤酒與尿布的背後原理 Python實作-Scikit Learn一步一步教學
+https://chwang12341.medium.com/machine-learning-%E9%97%9C%E8%81%AF%E5%88%86%E6%9E%90-apriori%E6%BC%94%E7%AE%97%E6%B3%95-%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AA%E5%95%A4%E9%85%92%E8%88%87%E5%B0%BF%E5%B8%83%E7%9A%84%E8%83%8C%E5%BE%8C%E5%8E%9F%E7%90%86-python%E5%AF%A6%E4%BD%9C-scikit-learn%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E6%95%99%E5%AD%B8-76b7778f8f34
+
+【資料科學入門】購物車裡的秘密 — 關聯分析是什麼？Apriori演算法介紹
+https://medium.com/women-in-data-science-taipei/%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%85%A5%E9%96%80-%E9%97%9C%E8%81%AF%E5%88%86%E6%9E%90-cde4e9d64b43
+
+数据挖掘相关联系著名案例——啤酒与尿布
+https://cloud.tencent.com/developer/article/1105331
+
+主題六-關聯分析1220
+https://docs.google.com/presentation/d/1m8P8aM-YnYnTFc5KxXc7W_arylnBcUVl/edit#slide=id.g1093074574c_0_32
+
+第六組_關聯分析
+https://docs.google.com/presentation/d/1gnJ0GO5QJB1ShNLLBWWfjvMgQmroefew/edit#slide=id.p3

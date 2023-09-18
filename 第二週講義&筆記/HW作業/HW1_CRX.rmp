@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="10.1.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="10.1.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="10.1.001" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Users\acer0\OneDrive\桌面\crx.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="false"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="x-windows-950"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Gender.true.polynominal.attribute"/>
+          <parameter key="1" value="Age.true.polynominal.attribute"/>
+          <parameter key="2" value="Debt.true.real.attribute"/>
+          <parameter key="3" value="Married.true.polynominal.attribute"/>
+          <parameter key="4" value="BankCustomer.true.polynominal.attribute"/>
+          <parameter key="5" value="Industry.true.polynominal.attribute"/>
+          <parameter key="6" value="Ethnicity.true.polynominal.attribute"/>
+          <parameter key="7" value="YearsEmployed.true.real.attribute"/>
+          <parameter key="8" value="PriorDefault.true.polynominal.attribute"/>
+          <parameter key="9" value="Employed.true.polynominal.attribute"/>
+          <parameter key="10" value="CreditScore.true.integer.attribute"/>
+          <parameter key="11" value="DriversLicense.true.polynominal.attribute"/>
+          <parameter key="12" value="Citizen.true.polynominal.attribute"/>
+          <parameter key="13" value="ZipCode.true.polynominal.attribute"/>
+          <parameter key="14" value="Income.true.integer.attribute"/>
+          <parameter key="15" value="Approved.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <description align="center" color="transparent" colored="false" width="126">&amp;#35712;&amp;#21462;&amp;#21407;&amp;#22987;&amp;#27284;&amp;#26696;crx.csv</description>
+      </operator>
+      <operator activated="true" class="subprocess" compatibility="10.1.001" expanded="true" height="82" name="第一題的流程處理" width="90" x="916" y="187">
+        <process expanded="true">
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Gender)" width="90" x="45" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Gender"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="a" value="0"/>
+              <parameter key="b" value="1"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Gender)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Married)" width="90" x="179" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Married"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="u" value="1"/>
+              <parameter key="y" value="0"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Married)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(BankCustomer)" width="90" x="313" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="BankCustomer"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="g" value="1"/>
+              <parameter key="p" value="0"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(BankCustomer)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Industry)" width="90" x="447" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Industry"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="aa" value="ConsumerStaples"/>
+              <parameter key="c" value="Energy"/>
+              <parameter key="cc" value="InformationTechnology"/>
+              <parameter key="d" value="Real Estate"/>
+              <parameter key="e" value="Education"/>
+              <parameter key="ff" value="Healthcare"/>
+              <parameter key="i" value="ConsumerDiscretionary"/>
+              <parameter key="j" value="Research"/>
+              <parameter key="k" value="Financials"/>
+              <parameter key="m" value="CommunicationServices"/>
+              <parameter key="q" value="Materials"/>
+              <parameter key="r" value="Transport"/>
+              <parameter key="w" value="Industrials"/>
+              <parameter key="x" value="Utilities"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Industry)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Ethnicity)" width="90" x="581" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Ethnicity"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="bb" value="Asian"/>
+              <parameter key="dd" value="Other"/>
+              <parameter key="ff" value="Latino"/>
+              <parameter key="h" value="Black"/>
+              <parameter key="j" value="Other"/>
+              <parameter key="n" value="Other"/>
+              <parameter key="o" value="Other"/>
+              <parameter key="v" value="White"/>
+              <parameter key="z" value="Other"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Ethnicity)</description>
+          </operator>
+          <operator activated="true" class="filter_examples" compatibility="10.1.001" expanded="true" height="103" name="過濾資料(Ethnicity)" width="90" x="581" y="187">
+            <parameter key="parameter_expression" value=""/>
+            <parameter key="condition_class" value="custom_filters"/>
+            <parameter key="invert_filter" value="false"/>
+            <list key="filters_list">
+              <parameter key="filters_entry_key" value="Ethnicity.is_not_missing."/>
+            </list>
+            <parameter key="filters_logic_and" value="true"/>
+            <parameter key="filters_check_metadata" value="true"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#31227;&amp;#38500;&amp;#38357;&amp;#28431;&amp;#20540;</description>
+          </operator>
+          <operator activated="false" class="filter_examples" compatibility="10.1.001" expanded="true" height="103" name="過濾資料(Ethnicity) (2)" width="90" x="447" y="187">
+            <parameter key="parameter_expression" value=""/>
+            <parameter key="condition_class" value="custom_filters"/>
+            <parameter key="invert_filter" value="false"/>
+            <list key="filters_list">
+              <parameter key="filters_entry_key" value="Ethnicity.is_not_missing."/>
+              <parameter key="filters_entry_key" value="Ethnicity.does_not_equal.Other"/>
+              <parameter key="filters_entry_key" value="Ethnicity.does_not_equal.Latino"/>
+              <parameter key="filters_entry_key" value="Ethnicity.does_not_equal.Asian"/>
+            </list>
+            <parameter key="filters_logic_and" value="true"/>
+            <parameter key="filters_check_metadata" value="true"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#31227;&amp;#38500;&amp;#31558;&amp;#25976;&amp;#36942;&amp;#23569;&amp;#30340;&amp;#20540;&lt;br&gt;(Other&amp;#12289;Latino&amp;#21450;Asian)</description>
+          </operator>
+          <operator activated="true" class="blending:generate_columns" compatibility="10.1.001" expanded="true" height="82" name="合併資料" width="90" x="581" y="340">
+            <list key="function_descriptions">
+              <parameter key="Ethnicity" value="if(Ethnicity==&quot;Asian&quot;, &quot;Other&quot;,Ethnicity)"/>
+              <parameter key="Ethnicity" value="if(Ethnicity==&quot;Latino&quot;, &quot;Other&quot;,Ethnicity)"/>
+            </list>
+            <parameter key="keep_all_columns" value="true"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#23559;Other&amp;#12289;Latino&amp;#21450;Asian&amp;#21512;&amp;#20341;&amp;#28858;Other</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(PriorDefault)" width="90" x="715" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="PriorDefault"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="t" value="1"/>
+              <parameter key="f" value="0"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(PriorDefault)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Employed)" width="90" x="849" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Employed"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="t" value="1"/>
+              <parameter key="f" value="0"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Employed)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(DriversLicense)" width="90" x="983" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="DriversLicense"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="t" value="1"/>
+              <parameter key="f" value="0"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(DriversLicense)</description>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Citizen)" width="90" x="1117" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Citizen"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="g" value="ByBirth"/>
+              <parameter key="s" value="ByOtherMeans"/>
+              <parameter key="p" value="Temporary"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Citizen)</description>
+          </operator>
+          <operator activated="true" class="blending:select_attributes" compatibility="10.1.001" expanded="true" height="82" name="移除欄位(ZipCode)" width="90" x="1251" y="34">
+            <parameter key="type" value="exclude attributes"/>
+            <parameter key="attribute_filter_type" value="one attribute"/>
+            <parameter key="select_attribute" value="ZipCode"/>
+            <parameter key="select_subset" value=""/>
+            <parameter key="also_apply_to_special_attributes_(id,_label..)" value="false"/>
+          </operator>
+          <operator activated="true" class="map" compatibility="10.1.001" expanded="true" height="82" name="轉換資料(Approved)" width="90" x="1385" y="34">
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Approved"/>
+            <parameter key="attributes" value="Gender"/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <list key="value_mappings">
+              <parameter key="+" value="1"/>
+              <parameter key="-" value="0"/>
+            </list>
+            <parameter key="consider_regular_expressions" value="false"/>
+            <parameter key="add_default_mapping" value="false"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#36681;&amp;#25563;&amp;#36039;&amp;#26009;(Approved)</description>
+          </operator>
+          <operator activated="true" class="order_attributes" compatibility="10.1.001" expanded="true" height="82" name="Reorder Attributes" width="90" x="1519" y="34">
+            <parameter key="sort_mode" value="user specified"/>
+            <parameter key="attribute_ordering" value="Gender|Age|Debt|Married|BankCustomer|Industry|Ethnicity|YearsEmployed|PriorDefault|Employed|CreditScore|DriversLicense|Citizen|ZipCode|Income|Approved"/>
+            <parameter key="use_regular_expressions" value="false"/>
+            <parameter key="handle_unmatched" value="append"/>
+            <parameter key="sort_direction" value="ascending"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#28858;&amp;#26041;&amp;#20415;&amp;#33287;&amp;#32080;&amp;#26524;&amp;#27284;&amp;#27604;&amp;#23565;&amp;#65292;&amp;#22240;&amp;#27492;&amp;#37325;&amp;#26032;&amp;#25490;&amp;#21015;&amp;#27396;&amp;#20301;&amp;#12290;</description>
+          </operator>
+          <connect from_port="in 1" to_op="轉換資料(Gender)" to_port="example set input"/>
+          <connect from_op="轉換資料(Gender)" from_port="example set output" to_op="轉換資料(Married)" to_port="example set input"/>
+          <connect from_op="轉換資料(Married)" from_port="example set output" to_op="轉換資料(BankCustomer)" to_port="example set input"/>
+          <connect from_op="轉換資料(BankCustomer)" from_port="example set output" to_op="轉換資料(Industry)" to_port="example set input"/>
+          <connect from_op="轉換資料(Industry)" from_port="example set output" to_op="轉換資料(Ethnicity)" to_port="example set input"/>
+          <connect from_op="轉換資料(Ethnicity)" from_port="example set output" to_op="過濾資料(Ethnicity)" to_port="example set input"/>
+          <connect from_op="過濾資料(Ethnicity)" from_port="example set output" to_op="合併資料" to_port="table input"/>
+          <connect from_op="合併資料" from_port="table output" to_op="轉換資料(PriorDefault)" to_port="example set input"/>
+          <connect from_op="轉換資料(PriorDefault)" from_port="example set output" to_op="轉換資料(Employed)" to_port="example set input"/>
+          <connect from_op="轉換資料(Employed)" from_port="example set output" to_op="轉換資料(DriversLicense)" to_port="example set input"/>
+          <connect from_op="轉換資料(DriversLicense)" from_port="example set output" to_op="轉換資料(Citizen)" to_port="example set input"/>
+          <connect from_op="轉換資料(Citizen)" from_port="example set output" to_op="移除欄位(ZipCode)" to_port="example set input"/>
+          <connect from_op="移除欄位(ZipCode)" from_port="example set output" to_op="轉換資料(Approved)" to_port="example set input"/>
+          <connect from_op="轉換資料(Approved)" from_port="example set output" to_op="Reorder Attributes" to_port="example set input"/>
+          <connect from_op="Reorder Attributes" from_port="example set output" to_port="out 1"/>
+          <portSpacing port="source_in 1" spacing="0"/>
+          <portSpacing port="source_in 2" spacing="0"/>
+          <portSpacing port="sink_out 1" spacing="0"/>
+          <portSpacing port="sink_out 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="true" class="subprocess" compatibility="10.1.001" expanded="true" height="82" name="第二題的流程處理" width="90" x="1921" y="85">
+        <process expanded="true">
+          <operator activated="true" class="replace_missing_values" compatibility="10.1.001" expanded="true" height="103" name="處理遺漏值(Gender)" width="90" x="45" y="34">
+            <parameter key="return_preprocessing_model" value="false"/>
+            <parameter key="attribute_filter_type" value="single"/>
+            <parameter key="attribute" value="Gender"/>
+            <parameter key="attributes" value=""/>
+            <parameter key="use_except_expression" value="false"/>
+            <parameter key="value_type" value="attribute_value"/>
+            <parameter key="use_value_type_exception" value="false"/>
+            <parameter key="except_value_type" value="time"/>
+            <parameter key="block_type" value="attribute_block"/>
+            <parameter key="use_block_type_exception" value="false"/>
+            <parameter key="except_block_type" value="value_matrix_row_start"/>
+            <parameter key="invert_selection" value="false"/>
+            <parameter key="include_special_attributes" value="false"/>
+            <parameter key="default" value="value"/>
+            <list key="columns"/>
+            <parameter key="replenishment_value" value="1"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#23559;&amp;#36986;&amp;#28431;&amp;#20540;&amp;#21462;&amp;#20195;&amp;#28858;1</description>
+          </operator>
+          <operator activated="true" class="blending:generate_columns" compatibility="10.1.001" expanded="true" height="82" name="處理遺漏值(Age)" width="90" x="179" y="34">
+            <list key="function_descriptions">
+              <parameter key="Age" value="if((Age==&quot;?&quot;) &amp;&amp; (Ethnicity==&quot;White&quot;) &amp;&amp; (Gender==&quot;0&quot;), &quot;24.625&quot;, Age)"/>
+              <parameter key="Age" value="if((Age==&quot;?&quot;) &amp;&amp; (Ethnicity==&quot;White&quot;) &amp;&amp; (Gender==&quot;1&quot;), &quot;27.58&quot;, Age)"/>
+              <parameter key="Age" value="if((Age==&quot;?&quot;) &amp;&amp; (Ethnicity==&quot;Other&quot;) &amp;&amp; (Gender==&quot;0&quot;), &quot;31.835&quot;, Age)"/>
+              <parameter key="Age" value="if((Age==&quot;?&quot;) &amp;&amp; (Ethnicity==&quot;Other&quot;) &amp;&amp; (Gender==&quot;1&quot;), &quot;34.625&quot;, Age)"/>
+            </list>
+            <parameter key="keep_all_columns" value="true"/>
+            <description align="center" color="transparent" colored="false" width="126">&amp;#20381;&amp;#29031;&amp;#32068;&amp;#21029;(Ethnicity&amp;#21450;Gender)&amp;#35036;&amp;#19978;&amp;#20013;&amp;#20301;&amp;#25976;</description>
+          </operator>
+          <operator activated="true" class="filter_examples" compatibility="10.1.001" expanded="true" height="103" name="處理遺漏值(Married)" width="90" x="313" y="34">
+            <parameter key="parameter_expression" value=""/>
+            <parameter key="condition_class" value="custom_filters"/>
+            <parameter key="invert_filter" value="false"/>
+            <list key="filters_list">
+              <parameter key="filters_entry_key" value="Married.does_not_equal.l"/>
+            </list>
+            <parameter key="filters_logic_and" value="true"/>
+            <parameter key="filters_check_metadata" value="true"/>
+            <description align="center" color="transparent" colored="false" width="126">Married&amp;#21034;&amp;#38500;&amp;#36664;&amp;#37679;&amp;#30340;&amp;#36039;&amp;#26009;</description>
+          </operator>
+          <connect from_port="in 1" to_op="處理遺漏值(Gender)" to_port="example set input"/>
+          <connect from_op="處理遺漏值(Gender)" from_port="example set output" to_op="處理遺漏值(Age)" to_port="table input"/>
+          <connect from_op="處理遺漏值(Age)" from_port="table output" to_op="處理遺漏值(Married)" to_port="example set input"/>
+          <connect from_op="處理遺漏值(Married)" from_port="example set output" to_port="out 1"/>
+          <portSpacing port="source_in 1" spacing="0"/>
+          <portSpacing port="source_in 2" spacing="0"/>
+          <portSpacing port="sink_out 1" spacing="0"/>
+          <portSpacing port="sink_out 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="false" class="filter_examples" compatibility="10.1.001" expanded="true" height="103" name="Filter Examples" width="90" x="2189" y="238">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list">
+          <parameter key="filters_entry_key" value="Gender.equals.0"/>
+        </list>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+      </operator>
+      <operator activated="false" class="write_csv" compatibility="10.1.001" expanded="true" height="82" name="Write CSV" width="90" x="2323" y="238">
+        <parameter key="csv_file" value="D:/哲平/北科大_碩班_AI學程/碩一課程/317124 金融大數據/第二週講義&amp;筆記/HW作業/Draft/計算中位數.csv"/>
+        <parameter key="column_separator" value=","/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="第一題的流程處理" to_port="in 1"/>
+      <connect from_op="第一題的流程處理" from_port="out 1" to_op="第二題的流程處理" to_port="in 1"/>
+      <connect from_op="第二題的流程處理" from_port="out 1" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <description align="center" color="orange" colored="true" height="495" resized="true" width="1617" x="151" y="11">&amp;#31532;&amp;#19968;&amp;#38988; Processes</description>
+      <description align="center" color="red" colored="true" height="463" resized="true" width="406" x="1774" y="10">&amp;#31532;&amp;#20108;&amp;#38988; Processes</description>
+    </process>
+  </operator>
+</process>

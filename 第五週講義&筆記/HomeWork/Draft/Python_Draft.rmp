@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="10.1.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="10.1.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="10.1.001" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Users\acer0\OneDrive\桌面\gamestudy.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="x-windows-950"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="S\. No\..true.integer.attribute"/>
+          <parameter key="1" value="Timestamp.true.real.attribute"/>
+          <parameter key="2" value="GAD1.true.integer.attribute"/>
+          <parameter key="3" value="GAD2.true.integer.attribute"/>
+          <parameter key="4" value="GAD3.true.integer.attribute"/>
+          <parameter key="5" value="GAD4.true.integer.attribute"/>
+          <parameter key="6" value="GAD5.true.integer.attribute"/>
+          <parameter key="7" value="GAD6.true.integer.attribute"/>
+          <parameter key="8" value="GAD7.true.integer.attribute"/>
+          <parameter key="9" value="GADE.true.polynominal.attribute"/>
+          <parameter key="10" value="SWL1.true.integer.attribute"/>
+          <parameter key="11" value="SWL2.true.integer.attribute"/>
+          <parameter key="12" value="SWL3.true.integer.attribute"/>
+          <parameter key="13" value="SWL4.true.integer.attribute"/>
+          <parameter key="14" value="SWL5.true.integer.attribute"/>
+          <parameter key="15" value="Game.true.polynominal.attribute"/>
+          <parameter key="16" value="Platform.true.polynominal.attribute"/>
+          <parameter key="17" value="Hours.true.polynominal.attribute"/>
+          <parameter key="18" value="earnings.true.polynominal.attribute"/>
+          <parameter key="19" value="whyplay.true.polynominal.attribute"/>
+          <parameter key="20" value="League.true.polynominal.attribute"/>
+          <parameter key="21" value="highestleague.true.polynominal.attribute"/>
+          <parameter key="22" value="streams.true.polynominal.attribute"/>
+          <parameter key="23" value="SPIN1.true.polynominal.attribute"/>
+          <parameter key="24" value="SPIN2.true.polynominal.attribute"/>
+          <parameter key="25" value="SPIN3.true.polynominal.attribute"/>
+          <parameter key="26" value="SPIN4.true.polynominal.attribute"/>
+          <parameter key="27" value="SPIN5.true.polynominal.attribute"/>
+          <parameter key="28" value="SPIN6.true.polynominal.attribute"/>
+          <parameter key="29" value="SPIN7.true.polynominal.attribute"/>
+          <parameter key="30" value="SPIN8.true.polynominal.attribute"/>
+          <parameter key="31" value="SPIN9.true.polynominal.attribute"/>
+          <parameter key="32" value="SPIN10.true.polynominal.attribute"/>
+          <parameter key="33" value="SPIN11.true.polynominal.attribute"/>
+          <parameter key="34" value="SPIN12.true.polynominal.attribute"/>
+          <parameter key="35" value="SPIN13.true.polynominal.attribute"/>
+          <parameter key="36" value="SPIN14.true.polynominal.attribute"/>
+          <parameter key="37" value="SPIN15.true.polynominal.attribute"/>
+          <parameter key="38" value="SPIN16.true.polynominal.attribute"/>
+          <parameter key="39" value="SPIN17.true.polynominal.attribute"/>
+          <parameter key="40" value="Narcissism.true.polynominal.attribute"/>
+          <parameter key="41" value="Gender.true.polynominal.attribute"/>
+          <parameter key="42" value="Age.true.integer.attribute"/>
+          <parameter key="43" value="Work.true.polynominal.attribute"/>
+          <parameter key="44" value="Degree.true.polynominal.attribute"/>
+          <parameter key="45" value="Birthplace.true.polynominal.attribute"/>
+          <parameter key="46" value="Residence.true.polynominal.attribute"/>
+          <parameter key="47" value="Reference.true.polynominal.attribute"/>
+          <parameter key="48" value="Playstyle.true.polynominal.attribute"/>
+          <parameter key="49" value="accept.true.polynominal.attribute"/>
+          <parameter key="50" value="GAD_T.true.integer.attribute"/>
+          <parameter key="51" value="SWL_T.true.integer.attribute"/>
+          <parameter key="52" value="SPIN_T.true.polynominal.attribute"/>
+          <parameter key="53" value="Residence_ISO3.true.polynominal.attribute"/>
+          <parameter key="54" value="Birthplace_ISO3.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="python_scripting:execute_python" compatibility="10.0.000" expanded="true" height="82" name="Execute Python" width="90" x="179" y="34">
+        <parameter key="script" value="import pandas&#10;&#10;# rm_main is a mandatory function, &#10;# the number of arguments has to be the number of input ports (can be none),&#10;#     or the number of input ports plus one if &quot;use macros&quot; parameter is set&#10;# if you want to use macros, use this instead and check &quot;use macros&quot; parameter:&#10;#def rm_main(data,macros):&#10;def rm_main():&#10;    print('Hello, world!')&#10;    # output can be found in Log View&#10;    #print(type(data))&#10;    df = pd.read_csv(data, encoding = 'ISO-8859-1')&#10;    #your code goes here&#10;&#10;    #for example:&#10;    data2 = pandas.DataFrame([3,5,77,8])&#10;&#10;    # connect 2 output ports to see the results&#10;    return df"/>
+        <parameter key="notebook_cell_tag_filter" value=""/>
+        <parameter key="use_default_python" value="true"/>
+        <parameter key="package_manager" value="conda (anaconda)"/>
+        <parameter key="use_macros" value="false"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Execute Python" to_port="script file"/>
+      <connect from_op="Execute Python" from_port="output 1" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>

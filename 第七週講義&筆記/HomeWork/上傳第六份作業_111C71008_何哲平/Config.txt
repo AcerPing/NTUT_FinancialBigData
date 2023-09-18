@@ -1,0 +1,3 @@
+1.) RapidMiner版本：10.1.001
+2.) spam_clean來源檔案路徑：在資料夾內，檔名為spam_clean.rmhdf5table
+3.) Womens Clothing E-Commerce Reviews.csv來源檔案路徑：C:\Users\acer0\OneDrive\桌面\Womens Clothing E-Commerce Reviews.csv

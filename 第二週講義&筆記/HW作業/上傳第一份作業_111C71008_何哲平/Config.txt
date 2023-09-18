@@ -1,0 +1,2 @@
+RapidMiner版本：10.1.001
+來源檔案路徑：C:\Users\acer0\OneDrive\桌面\crx.csv
